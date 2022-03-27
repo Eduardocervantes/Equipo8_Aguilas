@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  header {
+    height: 64px;
+    background: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #btn-menu {
+    display: none;
+  }
+  
+  header label {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu ul {
+    background: #000;
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu ul ul {
+    display: none;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #FFF;
+    text-decoration: none;
+    line-height: 32px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+  }
+  
+  .menu a:hover {
+    background: #2C3E50;
+  }
+  
+  .menu a i {
+    margin-left: 10px;
+  }
+  
+  .menu ul li:hover ul {
+    transition: all 0.3s ease;
+    display: block;
+    position: absolute;
+  }
+  
+  @media (max-width: 768px) {
+    header label {
+      display: block;
+      padding-top: 16px;
+      padding-right: 16px;
+      transition: all 0.4s ease;
+    }
+    
+    .menu {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 70%;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+    }
+    
+    .menu ul {
+      flex-direction: column;
+      display: block;
+    }
+    
+    .menu ul li:hover ul {
+      display: none;
+      position: static;
+    }
+    
+    .menu a i {
+      position: absolute;
+      right: 16px;
+      line-height: 32px;
+    }
+    
+    #btn-menu:checked ~ .menu {
+      transform: translateX(0%);
+    }
+    
+  }
+  table {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    font-size: 150%;
+}
+
+.ac {
+    color: rgba(255, 0, 0, 0.705);
+}
+body {
+    background: linear-gradient(to right, rgba(57, 106, 252, 0.5), rgba(41, 255, 87, 0.274));
+}
+
+    </style>
+    <title>Calculadora</title>
+</head>
+<header>
+    <input type="checkbox" id="btn-menu" />
+    <label for="btn-menu"><i class="fa fa-bars"></i></label>
+    <nav class="menu">
+      <ul>
+        <li><a href="Untitled-1.html">Pagina Principal</a></li>
+        <li class="submenu"><a href="Untitled-1.html">Aplicaciones <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li><a href="Calculos.html">Calculadora</a></li>
+            <li><a href="Tabla_GD.html">Tabla De Gestión</a></li>
+            <li><a href="Tabla_Servicios.html">Tabla De Servicios</a></li>
+            <li><a href="Proveedor.html">Proveedores</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+          </ul>
+        </li>
+        <li class="submenu"><a href="#">Información Profesional<i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li><a href="DesarrolloAca.html">Equipo Academico</a></li>
+            <li><a href="DirectorioUV.html">Administración UV</a></li>
+            <li><a href="InformacionEmpresarial.html">Información Empresarial</a></li>
+            <li><a href="Localizacion.html">Localización</a></li>
+          </ul>
+    </nav>
+  </header>
+<body>
+  <center>
+  <img src="Logo B.png"  width="750" height="560">
+</center>
+  <meta charset="utf-8">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="calculator.css" rel="stylesheet">
+  <script src="calculator.js"></script>    
+  <title>Calculator!</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="4"><button id="result">0</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="add('1')">1</button></td>
+      <td><button onclick="add('2')">2</button></td>
+      <td><button onclick="add('3')">3</button></td>
+      <td><button onclick="add('+')">+</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="add('4')">4</button></td>
+      <td><button onclick="add('5')">5</button></td>
+      <td><button onclick="add('6')">6</button></td>
+      <td><button onclick="add('-')">-</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="add('7')">7</button></td>
+      <td><button onclick="add('8')">8</button></td>
+      <td><button onclick="add('9')">9</button></td>
+      <td><button onclick="add('*')">*</button></td>
+    </tr>
+    <tr>
+      <td colspan="3"><button onclick="add('0')">0</button></td>
+      <td colspan="3"><button onclick="add('/')">/</button></td>          
+    </tr>
+    <tr>
+      <td colspan="2"><button onclick="del()" class="ac">AC</button></td>
+      <td><button onclick="add('.')">.</button></td>
+      <td><button onclick="calc()">=</button></td>            
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <center>
+    <style>
+         * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+   }
+   
+   header {
+     height: 64px;
+     background: #000;
+     color: #FFF;
+     display: flex;
+     justify-content: flex-end;
+   }
+   
+   #btn-menu {
+     display: none;
+   }
+   
+   header label {
+     font-size: 30px;
+     cursor: pointer;
+     display: none;
+   }
+   
+   .menu ul {
+     background: #000;
+     display: flex;
+     list-style: none;
+   }
+   
+   .menu ul ul {
+     display: none;
+   }
+   
+   .menu a {
+     display: block;
+     padding: 15px 20px;
+     color: #FFF;
+     text-decoration: none;
+     line-height: 32px;
+     font-family: 'Ubuntu', sans-se
+     font-weight 700;
+   }
+   
+   .menu a:hover {
+     background: #2C3E50;
+   }
+   
+   .menu a i {
+     margin-left: 10px;
+   }
+   
+   .menu ul li:hover ul {
+     transition: all 0.3s ease;
+     display: block;
+     position: absolute;
+   }
+   
+   @media (max-width: 768px) {
+     header label {
+       display: block;
+       padding-top: 16px;
+       padding-right: 16px;
+       transition: all 0.4s ease;
+     }
+     
+     .menu {
+       position: absolute;
+       top: 64px;
+       left: 0;
+       width: 70%;
+       transform: translateX(-100%)
+       transition all 0.3s;
+     }
+     
+     .menu ul {
+       flex-direction: column;
+       display: block;
+     }
+     
+     .menu ul li:hover ul {
+       display: none;
+       position: static;
+     }
+     
+     .menu a i {
+       position: absolute;
+       right: 16px;
+       line-height: 32px;
+     }
+     
+     #btn-menu:checked ~ .menu {
+       transform: translateX(0%);
+     }
+     
+   }
+        :root {
+  --font: 'Oxygen', sans-serif;
+  --primary: #f1f1f1;
+  --gradient: linear-gradient(135deg, #3a20ad 0%, #489755 100%);
+  --black: black;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--gradient);
+  margin: 0;
+}
+.u-wrapper {
+  max-inline-size: 1232px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.h1 {
+  font-size: 59px;
+  line-height: 95px;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.h1 span {
+  display: block;
+}
+
+.h3 {
+  font-size: 48px;
+  line-height: 77px;
+}
+
+.social-item {
+  background: var(--primary);
+  display: inline-block;
+  inline-size: 44px;
+  block-size: 44px;
+  text-align: center;
+  line-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: center;
+  border: 2px solid var(--black);
+}
+
+.social-item + .social-item {
+  margin-left: 1em;
+}
+
+.social-item img {
+  vertical-align: middle;
+}
+
+.btn {
+  /* font-family: var(--font); */
+  border-radius: 90px;
+  letter-spacing: 1.25px;
+  background: initial;
+  block-size: 50px;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid var(--black);
+  font-weight: bold;
+  padding: 0 1.5em;
+}
+.btn.full {
+  width: 100%;
+}
+
+.btn.primary {
+  background: var(--primary);
+}
+
+.btn.secondary img{
+  position: relative;
+  bottom: 1px;
+}
+.btn i {
+  display: inline-block;
+}
+.btn span {
+  vertical-align: middle;
+}
+.btn i img {
+  vertical-align: middle;
+}
+
+.hero {
+  margin-block-end: 80px;
+}
+.hero-content img{
+  display: block;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+
+.header {
+  padding: 1em 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pre-projects-content {
+  text-align: center;
+}
+
+.pre-projects-content p {
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 38px;
+  letter-spacing: 0.5%;
+}
+
+.pre-projects-content p + p {
+  font-weight: bold;
+}
+
+.project {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-areas: "image" "description";
+}
+.project-description {
+  grid-area: description;
+
+}
+.project img {
+  max-width: 100%;
+}
+
+.tag span {
+  padding: .5em;
+  background: var(--black);
+  color: var(--primary);
+  box-shadow: -4px 4px 0 white;
+}
+
+.project-copy {
+  line-height: 25px;
+  letter-spacing: .5%;
+  margin-block-start: 2em;
+}
+.project-cta {
+  margin-block-start: 1.5em;
+}
+.project-cta button + button {
+  margin-block-start: 1em;
+}
+
+
+.testimony {
+  padding: 1.5em;
+  border-radius: 1.5em;
+  backdrop-filter: blur(39.7657px);
+  background: rgba(255,255,255,.2);
+  border: 3.98px solid rgba(255,255,255,.4);
+}
+.testimony-image {
+  text-align: center;
+}
+.testimony-copy {
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.testimony-title {
+  font-size: 12px;
+  color: rgba(0,0,0,.4);
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.project, .testimony {
+  margin-block: 2.5em;
+}
+
+.form {
+  max-inline-size: 550px;
+  margin: auto;
+}
+
+.form label {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: .5em;
+  padding-inline-start: .5em;
+}
+
+.form label span {
+  color: #DA1414;
+}
+
+.form input, .form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  padding: .8em;
+  border-radius: .5em;
+  border: 1px solid #858C94;
+}
+.form textarea {
+  margin-block-end: 2em;
+  font-family: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: #0F0A0A88;
+}
+
+
+.contact {
+  margin-block-end: 5em;
+}
+
+.footer {
+  text-align: center;
+}
+
+#trucazo {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "description image";
+  }
+
+  .hero-description {
+    grid-area: description;
+  }
+
+  .hero-image {
+    grid-area: image;
+  }
+  .hero-image img {
+    inline-size: 500px;
+    margin-top: -50px;
+  }
+
+  .pre-projects-content {
+    max-inline-size: 900px;
+    margin: auto;
+  }
+
+  .project {
+    grid-template-areas: "description image";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3em;
+  }
+  .project-cta {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .project-cta button + button {
+    margin: 0;
+  }
+
+  .testimony {
+    margin: auto;
+    padding: 5em;
+    text-align: center;
+  }
+  .testimony-copy {
+    font-size: 2.2em;
+    line-height: 55px;
+  }
+
+  .testimony-title {
+    font-size: 1.5em;
+  }
+  .project, .testimony {
+    margin-block: 5em;
+  }
+
+  .form .tag span {
+    display: block;
+    text-align: center;
+  }
+
+}
+    </style>
+    <header>
+      <input type="checkbox" id="btn-menu" />
+      <label for="btn-menu"><i class="fa fa-bars"></i></label>
+      <nav class="menu">
+        <ul>
+          <li><a href="Untitled-1.html">Pagina Principal</a></li>
+          <li class="submenu"><a href="Untitled-1.html">Aplicaciones <i class="fa fa-caret-down"></i></a>
+            <ul>
+       <li><a href="Calculos.html">Calculadora</a></li>
+       <li><a href="Tabla_GD.html">Tabla De Gestión</a></li>
+       <li><a href="Tabla_Servicios.html">Tabla De Servicios</a></li>
+       <li><a href="Proveedor.html">Proveedores</a></li>
+       <li><a href="Contacto.html">Contacto</a></li>
+     </ul>
+          </li>
+          <li class="submenu"><a href="#">Información Profesional<i class="fa fa-caret-down"></i></a>
+            <ul>
+              <li><a href="DesarrolloAca.html">Equipo Academico</a></li>
+              <li><a href="DirectorioUV.html">Administración UV</a></li>
+              <li><a href="#">Información Empresarial</a></li>
+              <li><a href="Localizacion.html">Localización</a></li>
+            </ul>
+      </nav>
+    </center>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <title>Contacto De Comunicación</title>
+</head>
+<body>
+        <form id="form" action="" class="form">
+          <label for="name">Nombre Completo <span>*</span></label>
+          <input name="name" required type="text" id="name" placeholder="Empleado">
+          <label for="email">Correo electrónico <span>*</span></label>
+          <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+          <button type="submit" class="btn primary full">enviar mensaje</button>
+        </form>
+        <a href="ec2880630@gmail.com" id="trucazo"></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+
+  </footer>
+  <script>
+    const $form = document.querySelector('#form')
+    const $buttonMailto = document.querySelector('#trucazo')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      $buttonMailto.setAttribute('href', `mailto:ec2880630@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+      $buttonMailto.click()
+    }
+  </script>
+
+
+
+</body>
+</html>

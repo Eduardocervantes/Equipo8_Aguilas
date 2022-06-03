@@ -13,6 +13,6 @@ EE: Analisis Y Diseño De Sistemas Estructurados (93952)
 
 Docente: Arieta Melgarejo (Patriciaparieta@uv.mx)
 
-Pagina Terminal: https://bit.ly/3stFdZV 
+Pagina Terminal: https://bit.ly/38KO6HF
 
 
